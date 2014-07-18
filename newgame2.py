@@ -1,5 +1,5 @@
 '''
-With this module you can change the difficulty and tun a new game.
+With this module you can change the difficulty and run a new game.
 '''
 
 ##########
