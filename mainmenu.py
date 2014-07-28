@@ -18,23 +18,21 @@ une autre tour.
 #MAIN MENU#
 ###########
 
-print('-'*30, 'TOURS DE HANOI', '-'*30,
-      '\n'*2, 'MENU PRINCIPAL', '\n'*2,
-      '1. NOUVELLE PARTIE \n',
-      '2. CHARGER UNE PARTIE \n',
+print('-'*30, 'TOWERS OF HANOI', '-'*30,
+      '\n'*2, 'MAIN MENU', '\n'*2,
+      '1. NEW GAME \n',
+      '2. LOAD GAME\n',
       '3. OPTIONS \n',
-      '4. QUITTER \n')
+      '4. QUIT \n')
 
 while True:
     
     try:
-        choice_main_menu = int(input('Choisir (1, 2, 3 ou 4): '))
+        choice_main_menu = int(input('Choice (1, 2, 3 or 4): '))
     except:
-        print('Erreur syntaxe ! Recommencez')
         continue
 
     if choice_main_menu not in range(1,5):
-        print('Erreur syntaxe ! Recommencez')
         continue
 
     elif choice_main_menu == 1:
