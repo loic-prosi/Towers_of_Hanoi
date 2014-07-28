@@ -1,4 +1,4 @@
-Towers_of_Hanoi
+Towers of Hanoi
 ===============
 
 Towers of Hanoi game in Python
