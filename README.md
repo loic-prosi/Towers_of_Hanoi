@@ -9,7 +9,7 @@ But du jeu: Faire passer tous les anneaux de la première à la dernière tour e
 Règles du jeu : Les anneaux doivent rester dans l'ordre décroissant.
 
 
-#DEBUT DU PROGRAMME#
+#Début du programme#
 
 Lorsqu'on lance le programme le menu principal apparaît proposant plusieurs options:
 
@@ -18,7 +18,7 @@ Lorsqu'on lance le programme le menu principal apparaît proposant plusieurs opt
 - Options (Affiche une fenêtre contenant certains paramètres du programme que l'utilisateur peut modifier. Ex : couleur et taille des tours, des anneaux, du halo de sélection etc...)
 - Quitter (On ferme le programme)
 
-#EN JEU#
+#En jeu#
 
 Lorsqu'on lance une nouvelle partie, 3 tours apparaissent à l'écran l'une après l'autre.
 
