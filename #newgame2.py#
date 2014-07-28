@@ -18,37 +18,40 @@ def test_input_difficulty():
             if n not in range(1, 5):
                 continue
         except:
-            continue       
+            continue
         return n
-        
+
 towers = [[], [], []]
 
-nb_disc = [2, 8, 10, 12]
+nb_disc = [5, 8, 10, 12]
 
 def test_move():
+    ''' Test input and make move '''
     while True:
         n = input('Tower origin / Tower destination (Ex : 12): ')
         if not n.isdecimal():
             continue
         if len(n) != 2:
             continue
-        tower_origin = int(n[0])
+        tower_source = int(n[0])
         tower_destination = int(n[1])
-        if tower_origin == tower_destination:
+        if tower_source == tower_destination:
             continue
-        if (tower_origin not in range(1, 4)) or (tower_destination not in range(1, 4)):
+        if tower_source not in range(1, 4) or\
+            (tower_destination not in range(1, 4)):
             continue
-        if towers[tower_origin-1] == []:
+        if towers[tower_source-1] == []:
             continue
         if towers[tower_destination-1] == []:
             break
-        if towers[tower_origin-1][0] < towers[tower_destination-1][0]:
+        if towers[tower_source-1][0] < towers[tower_destination-1][0]:
             break
-    disc = towers[tower_origin-1].pop(0)
+
+    disc = towers[tower_source - 1].pop(0)
     towers[tower_destination-1].insert(0, disc)
-         
-                
-        
+
+
+
 n = test_input_difficulty()
 towers[0] = [i for i in range(1, nb_disc[n-1]+1)]
 print('\n', "Tower 1 :", towers[0], '\n',
@@ -59,15 +62,3 @@ while True:
     print('\n', "Tower 1 :", towers[0], '\n',
           "Tower 2 :", towers[1], '\n',
           "Tower 3 :", towers[2], '\n')
-    if towers[0] == [] and (towers[1] == [] or towers[2] == []):
-        print('-'*30, 'YOU WIN !', '-'*30)
-        break
-
-
-
-
-    
-    
-    
-
-

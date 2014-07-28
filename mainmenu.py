@@ -38,7 +38,7 @@ while True:
         continue
 
     elif choice_main_menu == 1:
-        import newgame
+        import newgame2
         
     elif choice_main_menu == 2:
         import loadgame
