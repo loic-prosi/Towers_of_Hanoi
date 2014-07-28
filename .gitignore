@@ -18,6 +18,8 @@ $RECYCLE.BIN/
 __pycache__/
 *.pyc
 
+#Others
+saves/
 *.odt
 
 # =========================
