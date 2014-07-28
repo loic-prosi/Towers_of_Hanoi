@@ -14,8 +14,11 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
-#Python files
+#Python
+__pycache__/
 *.pyc
+
+*.odt
 
 # =========================
 # Operating System Files
