@@ -19,7 +19,7 @@ __pycache__/
 *.pyc
 
 #Others
-saves/
+saves/save.txt
 *.odt
 
 # =========================

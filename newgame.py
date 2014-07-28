@@ -39,7 +39,7 @@ def test_move():
         if n == 'qqq':
             raise SystemExit
         if n == 'save':
-            save = open("D:\\python34\\test\\Towers of Hanoi\\saves\\saves.txt", "w")
+            save = open("D:\\python34\\test\\Towers of Hanoi\\saves\\save.txt", "w")
             save.write(str(towers))
             save.write('\n')                       
             save.write(str(m))            
