@@ -19,7 +19,7 @@ __pycache__/
 *.pyc
 
 #Others
-Towers of Hanoi/saves/*
+saves/*
 *.odt
 
 # =========================

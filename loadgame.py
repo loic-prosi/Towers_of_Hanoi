@@ -1,21 +1,29 @@
 '''
-With this module you can load a saved game.
+With this module you can save and load a game.
 '''
 
 ###########
 #LOAD GAME#
 ###########
 
-print('\n', 'LOAD GAME', '\n')
+def save(towers, m):
+    import pickle
+    import os
+    if not os.path.exists("saves"):
+        os.mkdir("saves")    
+    save = open("saves\\save.txt", "wb")
+    pickle.dump(towers, save)
+    pickle.dump(m, save)
+    save.close()
+    print('Game saved !')
 
-load = open("D:\\python34\\test\\Towers of Hanoi\\saves\\saves.txt", "r")
-load_read = load.read()
-load_list = load_read.split('\n')
-
-towers = load_list[0]
-m = int(load_list[1])
-
-load.close()
+def load():        
+    import pickle
+    load = open("saves\\save.txt", "rb")
+    towers = pickle.load(load)
+    m = pickle.load(load)
+    load.close()
+    print('Game loaded !')
 
 
 

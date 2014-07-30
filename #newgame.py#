@@ -39,8 +39,12 @@ def test_move():
         if n == 'qqq':
             raise SystemExit
         if n == 'save':
-            from loadgame import save
-            save(towers, m)
+            save = open("D:\\python34\\test\\Towers of Hanoi\\saves\\save.txt", "w")
+            save.write(str(towers))
+            save.write('\n')                       
+            save.write(str(m))            
+            save.close()
+            print('Game saved !')
         if not n.isdecimal():
             continue
         if len(n) != 2:
@@ -48,6 +52,7 @@ def test_move():
         tower_origin = int(n[0])
         tower_destination = int(n[1])
         if tower_origin == tower_destination:
+
             continue
         if (tower_origin not in range(1, 4)) or (tower_destination not in range(1, 4)):
             continue
@@ -81,6 +86,7 @@ while True:
         print('Congratulations ! You Win in', m, 'moves !')
         a = input('Press ENTER to quit to the main menu ')
         import mainmenu
+
 
 
 
