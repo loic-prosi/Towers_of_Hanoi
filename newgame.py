@@ -2,6 +2,9 @@
 With this module you can change the difficulty and run a new game.
 '''
 
+towers = [[], [], []]
+nb_disc = [1, 8, 12]
+
 def difficulty():
     print('\n', 'NEW GAME', '\n'*2,
           '1. EASY \n',
@@ -13,25 +16,30 @@ def difficulty():
             n = int(input('Choice (1, 2, 3 or 4): '))
             if n not in range(1, 5):
                 continue
+            elif n == 4:
+                difficulty_custom()
         except:
             continue       
         return n
-        
-towers = [[], [], []]
 
-nb_disc = [1, 8, 12]
+def difficulty_custom():
+    n = int(input('Number of discs : '))
+    nb_disc.append(n)
 
+def help_info():
+    print('\n', 'ADDITIONNAL COMMANDS', '\n'*2,
+      'menu : Return to the main menu. \n',
+      'save : Save your current game. \n',
+      'quit : Quit the program without saving. \n')
+    
 def move():
     while True:
         n = input('Tower origin / Tower destination (Ex : 12) \n'
                   "Type 'help' to see the additionnals commands : ")
         if n == 'help':
-            print('\n', 'ADDITIONNAL COMMANDS', '\n'*2,
-                  'menu : Return to the main menu. \n',
-                  'save : Save your current game. \n',
-                  'quit : Quit the program without saving. \n')
+            help_info()
         if n == 'menu':
-            import mainmenu
+            from mainmenu import main_menu
         if n == 'qqq':
             raise SystemExit
         if n == 'save':
@@ -76,12 +84,4 @@ while True:
     if towers[0] == [] and (towers[1] == [] or towers[2] == []):
         print('Congratulations ! You Win in', m, 'moves !')
         a = input('Press ENTER to quit to the main menu ')
-        import mainmenu
-
-
-
-    
-    
-    
-
-
+        from mainmenu import main_menu

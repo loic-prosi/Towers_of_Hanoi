@@ -14,35 +14,31 @@ Le jeu est terminé lorsqu'on a déplacé l'intégralité d'une pile d'anneau ve
 une autre tour.
 '''
 
-print('-'*30, 'TOWERS OF HANOI', '-'*30,
-      '\n'*2, 'MAIN MENU', '\n'*2,
-      '1. NEW GAME \n',
-      '2. LOAD GAME\n',
-      '3. OPTIONS \n',
-      '4. QUIT \n')
+def main_menu():
+    print('-'*30, 'TOWERS OF HANOI', '-'*30,
+          '\n'*2, 'MAIN MENU', '\n'*2,
+          '1. NEW GAME \n',
+          '2. LOAD GAME\n',
+          '3. OPTIONS \n',
+          '4. QUIT \n')
+    while True:        
+        try:
+            choice_main_menu = int(input('Choice (1, 2, 3 or 4): '))
+        except:
+            continue
+        if choice_main_menu not in range(1,5):
+            continue
+        elif choice_main_menu == 1:            
+            import newgame
+        elif choice_main_menu == 2:
+            from loadgame import load
+            load()
+        elif choice_main_menu == 3:
+            import options
+        else:
+            break
 
-while True:
-    
-    try:
-        choice_main_menu = int(input('Choice (1, 2, 3 or 4): '))
-    except:
-        continue
-
-    if choice_main_menu not in range(1,5):
-        continue
-
-    elif choice_main_menu == 1:
-        import newgame
-        
-    elif choice_main_menu == 2:
-        from loadgame import load
-        load()
-
-    elif choice_main_menu == 3:
-        import options
-
-    else:
-        break
+main_menu()
 
 
     
