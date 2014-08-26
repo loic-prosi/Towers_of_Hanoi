@@ -14,10 +14,6 @@ Le jeu est terminé lorsqu'on a déplacé l'intégralité d'une pile d'anneau ve
 une autre tour.
 '''
 
-###########
-#MAIN MENU#
-###########
-
 print('-'*30, 'TOWERS OF HANOI', '-'*30,
       '\n'*2, 'MAIN MENU', '\n'*2,
       '1. NEW GAME \n',
@@ -39,7 +35,8 @@ while True:
         import newgame
         
     elif choice_main_menu == 2:
-        import loadgame
+        from loadgame import load
+        load()
 
     elif choice_main_menu == 3:
         import options

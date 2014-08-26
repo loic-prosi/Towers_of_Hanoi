@@ -2,13 +2,10 @@
 With this module you can save and load a game.
 '''
 
-###########
-#LOAD GAME#
-###########
-
+import pickle
+import os
+    
 def save(towers, m):
-    import pickle
-    import os
     if not os.path.exists("saves"):
         os.mkdir("saves")    
     save = open("saves\\save.txt", "wb")
@@ -18,8 +15,9 @@ def save(towers, m):
     print('Game saved !')
 
 def load():        
-    import pickle
     load = open("saves\\save.txt", "rb")
+    global towers
+    global m
     towers = pickle.load(load)
     m = pickle.load(load)
     load.close()

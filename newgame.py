@@ -2,17 +2,13 @@
 With this module you can change the difficulty and run a new game.
 '''
 
-##########
-#NEW GAME#
-##########
-
-def test_input_difficulty():
+def difficulty():
+    print('\n', 'NEW GAME', '\n'*2,
+          '1. EASY \n',
+          '2. NORMAL \n',
+          '3. HARD \n',
+          '4. CUSTOM \n')
     while True:
-        print('\n', 'NEW GAME', '\n'*2,
-              '1. EASY \n',
-              '2. NORMAL \n',
-              '3. HARD \n',
-              '4. CUSTOM \n')
         try:
             n = int(input('Choice (1, 2, 3 or 4): '))
             if n not in range(1, 5):
@@ -23,9 +19,9 @@ def test_input_difficulty():
         
 towers = [[], [], []]
 
-nb_disc = [1, 8, 12, 14]
+nb_disc = [1, 8, 12]
 
-def test_move():
+def move():
     while True:
         n = input('Tower origin / Tower destination (Ex : 12) \n'
                   "Type 'help' to see the additionnals commands : ")
@@ -63,7 +59,7 @@ def test_move():
     disc = towers[tower_origin-1].pop(0)
     towers[tower_destination-1].insert(0, disc)
     
-n = test_input_difficulty()
+n = difficulty()
 towers[0] = [i for i in range(1, nb_disc[n-1]+1)]
 print('\n', "Tower 1 :", towers[0], '\n',
       "Tower 2 :", towers[1], '\n',
@@ -71,7 +67,7 @@ print('\n', "Tower 1 :", towers[0], '\n',
 
 m = 0
 while True:
-    test_move()
+    move()
     m += 1
     print('\n', "Tower 1 :", towers[0], '\n',
           "Tower 2 :", towers[1], '\n',
